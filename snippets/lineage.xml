@@ -51,6 +51,9 @@
   <project path="hardware/qcom-caf/thermal" name="android_hardware_qcom_thermal" remote="lineage" />
   <project path="hardware/qcom-caf/vr" name="android_hardware_qcom_vr" remote="lineage" />
 
+  <!-- Hardware -->
+  <project path="hardware/libhardware" name="android_hardware_libhardware" remote="lineage" revision="lineage-19.0"/>
+
   <!-- Telephony -->
   <project path="vendor/codeaurora/telephony" name="android_vendor_codeaurora_telephony" remote="lineage" />
 
