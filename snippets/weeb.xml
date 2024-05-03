@@ -3,7 +3,7 @@
 
   <remote  name="weeb"
            revision="sushi"
-           fetch="https://github.com/WeebProject" />
+           fetch="https://github.com/WeebProjectXd" />
   
   <!-- Build -->
   <project path="art" name="platform_art" remote="weeb" />
