@@ -43,7 +43,6 @@
   <project path="vendor/settings" name="platform_vendor_settings" remote="weeb" />
 
   <!-- Hardware -->
-  <project path="hardware/libhardware" name="platform_hardware_libhardware" remote="weeb" />
   <project path="hardware/xiaomi" name="platform_hardware_xiaomi" remote="weeb" />
 
   <!-- Packages -->
