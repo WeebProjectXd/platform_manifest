@@ -8,6 +8,11 @@
   <remote  name="weeb1"
            revision="sushi"
            fetch="https://github.com/WeebProject" />
+
+  <remote  name="wip"
+           revision="12"
+           fetch="https://github.com/Nusantara-ROM" />
+
   
   <!-- Build -->
   <project path="art" name="platform_art" remote="weeb" />
@@ -79,7 +84,7 @@
   <project path="hardware/qcom-caf/msm8998/display" name="platform_hardware_qcom-caf_msm8998_display" groups="pdk-qcom,qcom,qcom_display" remote="weeb1" />
   <project path="hardware/qcom-caf/msm8998/media"   name="platform_hardware_qcom-caf_msm8998_media" groups="qcom,pdk-qcom" remote="weeb1" />
 
-  <project path="hardware/qcom-caf/sm8150/display" name="platform_hardware_qcom-caf_sm8150_display" groups="pdk-qcom,qcom,qcom_display" remote="weeb1" />
+  <project path="hardware/qcom-caf/sm8150/display" name="android_hardware_qcom_display" revision="12-sm8150" remote="wip" />
 
   <project path="vendor/qcom/opensource/data-ipa-cfg-mgr" name="platform_vendor_qcom_opensource_data-ipa-cfg-mgr" remote="weeb" />
   <project path="vendor/qcom/opensource/dataservices" name="platform_vendor_qcom_opensource_dataservices" remote="weeb" />
