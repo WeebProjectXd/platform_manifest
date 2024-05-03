@@ -7,7 +7,7 @@ Initializing Repository
 
 Repo initialization:
 
-        repo init -u https://github.com/WeebProject/platform_manifest -b sushi
+        repo init -u https://github.com/WeebProjectXd/platform_manifest -b sushi
 
 Sync repo :
 
