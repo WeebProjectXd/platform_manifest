@@ -1096,6 +1096,7 @@
   <include name="snippets/remove.xml" />
   <include name="snippets/lineage.xml" />
   <include name="snippets/weeb.xml" />
+  <include name="miku.xml" />
   <include name="arrow.xml" />
   <include name="exthm.xml" />
 
