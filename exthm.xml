@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+<!-- build -->
+  <project path="android" name="android" remote="exthm" />
+  <project path="build/make" name="android_build" remote="exthm" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="build/soong" name="android_build_soong" groups="pdk,tradefed" remote="exthm" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+
+<!-- Frameworks -->
+<project path="frameworks/base" name="android_frameworks_base" remote="exthm" />
+
+<!-- SELinux -->
+<project path="device/exthm/sepolicy" name="android_device_exthm_sepolicy" remote="exthm" />
+<project path="device/qcom/sepolicy_vndr" name="android_device_qcom_sepolicy_vndr" remote="exthm" />
+<project path="device/qcom/sepolicy-legacy-um" name="android_device_qcom_sepolicy-legacy-um" remote="exthm" />
+
+<!-- packages -->
+<project path="packages/apps/Bluetooth" name="android_packages_apps_Bluetooth" remote="exthm" />
+<project path="packages/apps/Calculator" name="android_packages_apps_Calculator" remote="exthm" />
+<project path="packages/apps/CarrierConfig" name="android_packages_apps_CarrierConfig" remote="exthm" />
+<project path="packages/apps/Dialer" name="android_packages_apps_Dialer" remote="exthm" />
+<project path="packages/apps/GamingMode" name="android_packages_apps_GamingMode" remote="exthm"/>
+<project path="packages/apps/GCamGOPrebuilt" name="android_packages_apps_GCamGOPrebuilt" remote="exthm"/>
+<project path="packages/apps/Launcher3" name="android_packages_apps_Launcher3" remote="exthm" />
+<project path="packages/apps/Messaging" name="android_packages_apps_Messaging" remote="exthm" />
+<project path="packages/apps/Music" name="android_packages_apps_Music" remote="exthm" />
+<project path="packages/apps/WallpaperPicker2" name="android_packages_apps_WallpaperPicker2" remote="exthm" />
+<project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="exthm" />
+<project path="packages/apps/PrebuiltsApk" name="android_packages_apps_PrebuiltsApk" remote="exthm" clone-depth="1"/>
+<project path="packages/apps/YellowPage" name="android_packages_apps_YellowPage" remote="exthm" />
+<project path="packages/modules/NetworkStack" name="android_packages_modules_NetworkStack" remote="exthm" />
+<project path="packages/services/Telecomm" name="android_packages_services_Telecomm" remote="exthm" />
+
+<!-- prebuilts -->
+<project path="prebuilts/exthmuix" name="android_prebuilts_exthmuix" clone-depth="1" remote="exthm" />
+<project path="prebuilts/gcc/darwin-x86/aarch64/aarch64-linux-android-4.9" name="android_prebuilts_gcc_darwin-x86_aarch64_aarch64-linux-android-4.9" groups="pdk,darwin,arm" clone-depth="1" remote="exthm" />
+<project path="prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.9" name="android_prebuilts_gcc_darwin-x86_arm_arm-linux-androideabi-4.9" groups="pdk,darwin,arm" clone-depth="1" remote="exthm" />
+<project path="prebuilts/gcc/darwin-x86/x86/x86_64-linux-android-4.9" name="android_prebuilts_gcc_darwin-x86_x86_x86_64-linux-android-4.9" groups="pdk,darwin,x86" clone-depth="1" remote="exthm" />
+<project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9" groups="pdk,linux,arm" clone-depth="1" remote="exthm" />
+<project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" name="android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9" groups="pdk,linux,arm" clone-depth="1" remote="exthm" />
+<project path="prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" name="android_prebuilts_gcc_linux-x86_x86_x86_64-linux-android-4.9" groups="pdk,linux,x86" clone-depth="1" remote="exthm" />
+
+<!-- vendor -->
+<project path="vendor/exthm" name="android_vendor_exthm" remote="exthm" />
+</manifest>
