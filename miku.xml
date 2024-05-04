@@ -9,120 +9,13 @@
 	   fetch="https://gitlab.com/arrowos-project"
 	   revision="refs/heads/arrow-12.0" />
 
-  <!-- Bootable -->
-  <project path="bootable/recovery" name="platform_bootable_recovery" remote="miku" />
-
-  <!-- Build -->
-  <project path="art" name="platform_art" remote="miku" />
-  <project path="bionic" name="platform_bionic" remote="miku" />
-  <project path="build/make" name="platform_build" remote="miku">
-    <copyfile src="core/root.mk" dest="Makefile" />
-    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
-    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
-    <linkfile src="core" dest="build/core" />
-    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
-    <linkfile src="target" dest="build/target" />
-    <linkfile src="tools" dest="build/tools" />
-  </project>
-  <project path="build/soong" name="platform_build_soong" remote="miku" >
-    <linkfile src="root.bp" dest="Android.bp" />
-    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
-  </project>
-
-  <!-- CAF -->
-  <project path="vendor/qcom/opensource/data-ipa-cfg-mgr" name="platform_vendor_qcom_opensource_data-ipa-cfg-mgr" remote="miku" />
-  <project path="vendor/qcom/opensource/dataservices" name="platform_vendor_qcom_opensource_dataservices" remote="miku" />
-  <project path="vendor/qcom/opensource/commonsys/bluetooth_ext" name="platform_vendor_qcom_opensource_bluetooth_ext" remote="miku" />
-  <project path="vendor/qcom/opensource/commonsys/display" name="platform_vendor_qcom_opensource_display-commonsys" remote="miku" />
-  <project path="vendor/qcom/opensource/commonsys/packages/apps/Bluetooth" name="platform_vendor_qcom_opensource_packages_apps_Bluetooth" remote="miku" />
-  <project path="vendor/qcom/opensource/commonsys/system/bt" name="platform_vendor_qcom_opensource_system_bt" remote="miku" />
-  <project path="vendor/qcom/opensource/commonsys-intf/bluetooth" name="platform_vendor_qcom_opensource_bluetooth-commonsys-intf" remote="miku" />
-  <project path="vendor/qcom/opensource/commonsys-intf/display" name="platform_vendor_qcom_opensource_display-commonsys-intf" remote="miku" />
-  <project path="vendor/qcom/opensource/interfaces" name="platform_vendor_qcom_opensource_interfaces" remote="miku" />
-  <project path="vendor/qcom/opensource/vibrator" name="platform_vendor_qcom_opensource_vibrator" remote="miku" />
-  <project path="vendor/qcom/opensource/usb" name="platform_vendor_qcom_opensource_usb" remote="miku" />
-
-  <!-- Device -->
-  <project path="device/qcom/sepolicy" name="platform_device_qcom_sepolicy" remote="miku" />
-  <project path="device/qcom/sepolicy-legacy-um" name="platform_device_qcom_sepolicy-legacy-um" remote="miku" />
-  <project path="device/qcom/sepolicy_vndr" name="platform_device_qcom_sepolicy_vndr" remote="miku" />
-  <project path="device/miku/sepolicy" name="platform_device_miku_sepolicy" remote="miku" />
-
-  <!-- External -->
-  <project path="external/arm-optimized-routines" name="external_arm-optimized-routines" remote="miku" />
-  <project path="external/e2fsprogs" name="platform_external_e2fsprogs" remote="miku" />
-  <project path="external/gptfdisk" name="platform_external_gptfdisk" remote="miku" />
-  <project path="external/jemalloc_new" name="platform_external_jemalloc_new" remote="miku" />
-  <project path="external/mksh" name="platform_external_mksh" remote="miku" />
-  <project path="external/tinycompress" name="platform_external_tinycompress" remote="miku" />
-  <project path="external/tinyxml" name="platform_external_tinyxml" remote="miku" />
-  <project path="external/selinux" name="platform_external_selinux" remote="miku" />
-  <project path="external/colorkt" name="platform_external_colorkt" remote="miku" />
-  <project path="external/themelib" name="platform_external_themelib" remote="miku" />
-
-  <!-- Framework -->
-  <project path="frameworks/base" name="platform_frameworks_base" remote="miku" />
-  <project path="frameworks/av" name="platform_frameworks_av" remote="miku" />
-  <project path="frameworks/native" name="platform_frameworks_native" remote="miku" />
-
+  
   <!-- Gcc -->
   <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-elf" name="platform_prebuilts_gcc_linux-x86_aarch64_aarch64-elf" remote="miku" />
   <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="platform_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9" remote="miku" />
   <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" name="platform_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9" remote="miku" />
 
-  <!-- General -->
-  <project path="vendor/miku" name="platform_vendor_miku" remote="miku" />
-  <project path="vendor/settings" name="platform_vendor_settings" remote="miku" />
-
-  <!-- HALS -->
-  <project path="hardware/qcom-caf/msm8996/audio" name="platform_hardware_qcom-caf_msm8996_audio" groups="qcom,qcom_audio,pdk-qcom" remote="miku" />
-  <project path="hardware/qcom-caf/msm8996/display" name="platform_hardware_qcom-caf_msm8996_display" groups="qcom,qcom_display,pdk-qcom" remote="miku" />
-  <project path="hardware/qcom-caf/msm8996/media" name="platform_hardware_qcom-caf_msm8996_media" groups="qcom,qcom_media,pdk-qcom" remote="miku" />
-  <project path="hardware/qcom-caf/msm8998/audio" name="platform_hardware_qcom-caf_msm8998_audio" groups="qcom,qcom_audio,pdk-qcom" remote="miku" />
-  <project path="hardware/qcom-caf/msm8998/display" name="platform_hardware_qcom-caf_msm8998_display" groups="qcom,qcom_display,pdk-qcom" remote="miku" />
-  <project path="hardware/qcom-caf/msm8998/media" name="platform_hardware_qcom-caf_msm8998_media" groups="qcom,qcom_media,pdk-qcom" remote="miku" />
-  <project path="hardware/qcom-caf/sm8150/audio" name="platform_hardware_qcom-caf_sm8150_audio" groups="qcom,qcom_audio,pdk-qcom" remote="miku" />
-  <project path="hardware/qcom-caf/sm8150/display" name="platform_hardware_qcom-caf_sm8150_display" groups="pdk-qcom,qcom,qcom_display" remote="miku" />
-  <project path="hardware/qcom-caf/sm8150/media" name="platform_hardware_qcom-caf_sm8150_media" groups="qcom,pdk-qcom" remote="miku" />
-  <project path="hardware/qcom-caf/wlan" name="platform_hardware_qcom_wlan" remote="miku" />
-
-  <!-- Hardware -->
-  <project path="hardware/libhardware" name="platform_hardware_libhardware" remote="miku" />
-
-  <!-- Miku Settings -->
-  <project path="vendor/MikuSettings" name="platform_vendor_MikuSettings" remote="miku" />
-
-  <!-- Packages -->
-  <project path="packages/apps/Bluetooth" name="platform_packages_apps_Bluetooth" remote="miku" />
-  <project path="packages/apps/Dialer" name="platform_packages_apps_Dialer" remote="miku" />
-  <project path="packages/apps/Launcher3" name="platform_packages_apps_Launcher3" remote="miku" />
-  <project path="packages/apps/Settings" name="platform_packages_apps_Settings" remote="miku" />
-  <project path="packages/apps/ThemePicker" name="platform_packages_apps_ThemePicker" remote="miku" />
-  <project path="packages/apps/SettingsIntelligence" name="platform_packages_apps_SettingsIntelligence" remote="miku" />
-  <project path="packages/apps/WallpaperPicker2" name="platform_packages_apps_WallpaperPicker2" remote="miku" />
-  <project path="packages/inputmethods/Gboard" name="platform_packages_inputmethods_Gboard" remote="miku" />
-  <project path="packages/modules/adb" name="platform_packages_modules_adb" remote="miku" />
-  <project path="packages/modules/NetworkStack" name="platform_packages_modules_NetworkStack" remote="miku" />
-
-  <!-- Providers -->
-  <project path="packages/providers/DownloadProvider" name="platform_packages_providers_DownloadProvider" remote="miku" /> 
-
   <!-- Proton -->
   <project path="prebuilts/clang/host/linux-x86/clang-proton" name="proton-clang" remote="miku" clone-depth="1" /> 
-
-  <!-- System Repos -->
-  <project path="system/bpf" name="platform_system_bpf" remote="miku" />
-  <project path="system/bt" name="platform_system_bt" remote="miku" />
-  <project path="system/core" name="platform_system_core" remote="miku" />
-  <project path="system/netd" name="platform_system_netd" remote="miku" />
-  <project path="system/update_engine" name="platform_system_update_engine" remote="miku" />
-  <project path="system/vold" name="platform_system_vold" remote="miku" />
-  <project path="system/sepolicy" name="platform_system_sepolicy" remote="miku" />
-
-  <!-- Themes -->
-  <project path="packages/overlays/Themes" name="platform_packages_overlays_Themes" remote="miku" />
-
-  <!-- GAPPS -->
-  <project path="vendor/gapps" name="android_vendor_gapps" remote="arrow-gitlab" clone-depth="1" />
 
 </manifest>
