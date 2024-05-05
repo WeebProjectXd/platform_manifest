@@ -33,7 +33,7 @@
 
   <!-- Device -->
   <project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy-legacy-um" remote="weeb" />
-  <project path="device/weeb/sepolicy" name="platform_device_miku_sepolicy" remote="weeb" />
+  <project path="device/weeb/sepolicy" name="platform_device_weeb_sepolicy" remote="weeb" />
 
   <!-- External -->
   <project path="external/tinycompress" name="platform_external_tinycompress" remote="weeb" />
