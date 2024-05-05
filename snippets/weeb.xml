@@ -33,6 +33,7 @@
 
   <!-- Device -->
   <project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy-legacy-um" remote="weeb" />
+  <project path="device/qcom/sepolicy_vndr" name="platform_device_qcom_sepolicy_vndr" remote="weeb" />
   <project path="device/weeb/sepolicy" name="platform_device_weeb_sepolicy" remote="weeb" />
 
   <!-- External -->
